@@ -1,0 +1,72 @@
+html, body {
+ background-color:#ffffff;
+ margin:0;
+ padding:0;
+ height: 100%;
+ font-family:"Verdana"; 
+
+}
+
+#content {
+  padding-left:1%;
+  min-height:85%;
+  float:left;
+  color: black;
+  width: 650px;
+  font-family:"Verdana"; 
+  display:inline;
+
+}
+
+#head {
+  float: left;
+  color: black;
+  width: 100%;
+  height: 10%;
+  font-family:"Verdana"; 
+  font-size:200%;
+}
+
+#wrapper {
+ 	position:relative; /* needed for footer positioning*/
+	margin:0 auto; /* center, not in IE5 */
+	width:650px;
+	background:#f0f0f0;
+	height:auto !important; /* real browsers */
+	height:94%; /* IE6: treaded as min-height*/
+	min-height:94%; /* real browsers */ 
+	border-style:solid;
+	border-color:#a0a0a0;
+	border-width:thin;
+	border-radius:10px;
+	overflow:hidden;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+
+ul#list-nav {
+list-style:none;
+margin:0px;
+padding:0;
+width:650px
+}
+
+ul#list-nav li {
+display:inline
+}
+
+ul#list-nav li a {
+text-decoration:none;
+padding:5px 0;
+width:161px;
+background:#000000;
+color:#eee;
+float:left;
+text-align:center;
+border-left:1px solid #fff;
+}
+
+ul#list-nav li a:hover {
+background:#a0a0a0;
+color:#000
+}
