@@ -22,9 +22,17 @@ class databaseaccess {
 		$statement = $this->db->prepare($query);
 		$statement->bindValue(':posts', $posts, PDO::PARAM_INT);
 		$statement->execute();
-		$this->result = $statement->fetchAll(/*PDO::FETCH_ASSOC*/);
-		var_dump($this->result);
-		
+		$this->result = $statement->fetchAll(PDO::FETCH_ASSOC);	
+	}
+
+	public function write($title,$text){
+		if ($this->db === null) throw new Exception("DB is not connected");
+
+		$query = "INSERT INTO `Blogging-Platform`.`posts` (`title` ,`text`) VALUES (:title, :text)";
+		$statement = $this->db->prepare($query);
+		$statement->bindValue(':title', $title, PDO::PARAM_STR);
+		$statement->bindValue(':text', $text, PDO::PARAM_STR);
+		$statement->execute();
 	}
 }
 

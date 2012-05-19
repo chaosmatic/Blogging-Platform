@@ -1,0 +1,4 @@
+Require once in the body, fetches up to 5 posts.
+Displays next page... uses get to goto itself? and each page tells it to get a different set.
+
+Also need input mechanism, that saves entry to text file, and adds an entry in the MySQL DB

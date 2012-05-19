@@ -19,14 +19,10 @@
 </ul><br>
    <div id=content>
 <?php
-echo "1";
 require_once ('database.php');
-$posts = '5';
-echo "2";
+$posts = 2;
 $dbh = new databaseaccess;
-echo "3";
 $dbh->displayposts($posts);
-echo "4";
 foreach ($dbh->result as $v1) {
   	foreach ($v1 as  $value => $v2) {
 		if ($value == "title"){
@@ -38,9 +34,8 @@ foreach ($dbh->result as $v1) {
 	}
 	echo "<hr>";
 }
-echo "5";
-echo "Hi
-</div>
+
+echo "By Jonathan Milford</div>
 </div>
 </body>";
 ?>
