@@ -12,8 +12,8 @@
 	</div>
 
 	<ul id="list-nav">
-	<li><a href="index.html">Home</a> </li>
-	<li><a href="downloads/index.html">Downloads</a> </li>
+	<li><a href="index.php">Home</a> </li>
+	<li><a href="newpost.php">New Post</a> </li>
 	<li><a href="minecraft/index.html">Minecraft</a> </li>
 	<li><a href="articles/index.html">Articles</a></li>
 </ul><br>
@@ -21,7 +21,7 @@
 
 <form method="post" action="submit.php">
 Title:<input type="text" size="50" maxlength="50" name="title"><br />
-Text:<br><textarea cols="75" rows="35" wrap="physical" name="text"></textarea><br />
+Text:<br><textarea cols="87" rows="35" wrap="soft" name="text"></textarea><br />
 <input type="submit" value="submit" name="submit">
 </form>
 By Jonathan Milford</div>

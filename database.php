@@ -5,7 +5,7 @@ class databaseaccess {
 	public $username = 'root';
 	public $password = 'root';
 	private $db = null;
-	public $result;
+	public $rows;
 
   	public function __construct() {
         	try {
@@ -16,13 +16,15 @@ class databaseaccess {
      		}
     	}
 
-	public function displayposts($posts) { 
+	public function displayposts($lbound,$ubound) { 
 		if ($this->db === null) throw new Exception("DB is not connected");
-		$query = "SELECT * FROM posts ORDER BY `id` DESC LIMIT :posts";
+		$query = "SELECT * FROM posts ORDER BY `id` DESC LIMIT :lbound, :ubound";
 		$statement = $this->db->prepare($query);
-		$statement->bindValue(':posts', $posts, PDO::PARAM_INT);
+		$statement->bindValue(':lbound', $lbound, PDO::PARAM_INT);
+		$statement->bindValue(':ubound', $ubound, PDO::PARAM_INT);
 		$statement->execute();
-		$this->result = $statement->fetchAll(PDO::FETCH_ASSOC);	
+		$this->result = $statement->fetchAll(PDO::FETCH_ASSOC);
+		var_dump($this->result);
 	}
 
 	public function write($title,$text){

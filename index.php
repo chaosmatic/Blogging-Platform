@@ -12,32 +12,66 @@
 	</div>
 
 	<ul id="list-nav">
-	<li><a href="index.html">Home</a> </li>
-	<li><a href="downloads/index.html">Downloads</a> </li>
+	<li><a href="index.php">Home</a> </li>
+	<li><a href="newpost.php">New Post</a> </li>
 	<li><a href="minecraft/index.html">Minecraft</a> </li>
 	<li><a href="articles/index.html">Articles</a></li>
 </ul><br>
    <div id=content>
 <?php
 require_once ('database.php');
-$posts = 2;
+$pageid = $_GET["pageid"];
+$lbound = 5*($pageid + 1) - 5;
+$ubound = 5*($pageid + 1);
 $dbh = new databaseaccess;
-$dbh->displayposts($posts);
-foreach ($dbh->result as $v1) {
-  	foreach ($v1 as  $value => $v2) {
-		if ($value == "title"){
-			echo "<h1>".$v2."</h1>";
+$dbh->displayposts($lbound, $ubound);
+if ($dbh->result != null){
+	foreach ($dbh->result as $v1) {
+  		foreach ($v1 as  $value => $v2) {
+			if ($value == "title"){
+				echo "<h1>".$v2."</h1>";
+			}
+			if ($value == "text"){
+				echo "<p>".nl2br($v2)."</p>";
+			}
 		}
-		if ($value == "text"){
-			echo "<p>".$v2."</p>";
-		}
+		echo "<hr>";
 	}
-	echo "<hr>";
-}
+	if($pageid == 0){
+		?>
+		<form method="get" action="<?php echo $PHP_SELF; ?>">
+		<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
+	</form>
+	<?php
 
-echo "By Jonathan Milford</div>
-</div>
-</body>";
+	}elseif($pageid > 0){
+		?>
+		<form method="get" action="<?php echo $PHP_SELF; ?>">
+		<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
+		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
+		</form>
+	<?php
+	}elseif($pageid > 0){
+		?>
+		<form method="get" action="<?php echo $PHP_SELF; ?>">
+		<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
+		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
+		</form>
+	<?php
+	}
+}else {
+	echo "The content you requested is not availible.";
+		?>
+		<form method="get" action="<?php echo $PHP_SELF; ?>">
+		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
+		</form>
+	<?php
+	}
 ?>
+By Jonathan Milford</div>
+</div>
+</body>
+
+
 
 
