@@ -24,7 +24,7 @@ class databaseaccess {
 		$statement->bindValue(':ubound', $ubound, PDO::PARAM_INT);
 		$statement->execute();
 		$this->result = $statement->fetchAll(PDO::FETCH_ASSOC);
-		var_dump($this->result);
+		//var_dump($this->result); //debugging only
 	}
 
 	public function write($title,$text){
