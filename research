@@ -1,0 +1,23 @@
+Blogging-Platform reseach
+
+http://stackoverflow.com/questions/10183885/is-it-much-more-resource-demanding-to-load-100-mysql-rows-than-to-load-only-5-of
+JQuery vs limit
+
+http://www.techonthenet.com/sql/count.php
+using Count()
+
+http://dev.mysql.com/doc/refman/5.1/en/counting-rows.html
+the docs on Count()
+
+Tangrs php code
+<?php
+     
+    $totalRows = theResultOf("SELECT COUNT(*) FROM database");
+    $totalPageNumbers = ceil( $totalRows / $rowsPerPage );
+     
+    $currentPageNumber = floor( $totalRows / $lowerBound );
+     
+    $entriesForCurrentPage = theResultOf("SELECT * FROM database ORDER BY id LIMIT ".escape($lowerBound).",".escape($upperBound));
+     
+    ?>
+

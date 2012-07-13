@@ -14,7 +14,7 @@ echo "</center>";
 
 	echo "<ul id='list-nav'>";
 	echo "<li><a href='index.php'>Home</a> </li>"; //these are the links at the top of page. between the > < is the appearance, in the ' ' is the location
-	echo "<li><a href='newpost.php'>New Post</a> </li>";
+	echo "<li><a href='login.php'>Login</a> </li>";
 	echo "<li><a href='minecraft/index.html'>Minecraft</a> </li>";
 	echo "<li><a href='articles/index.html'>Articles</a></li>";
 echo "</ul><br>";

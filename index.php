@@ -1,12 +1,12 @@
 <?php
+$time = microtime(true); 
 require_once ('head.php');
 require_once ('database.php');
 $pageid = $_GET["pageid"];
 $PostPerPage = 5;
-$lbound = $PostPerPage*($pageid + 1) - $PostPerPage;
-$ubound = $PostPerPage*($pageid + 1);
+$lbound = $PostPerPage*$pageid;
 $dbh = new databaseaccess;
-$dbh->displayposts($lbound, $ubound);
+$dbh->displayposts($lbound, $PostPerPage);
 if ($dbh->result != null){
 	foreach ($dbh->result as $v1) {
   		foreach ($v1 as  $value => $v2) {
@@ -50,7 +50,9 @@ if ($dbh->result != null){
 		</form>
 	<?php
 	}
+
 require_once('foot.php');
+echo "<!-PHP executed in: ".(microtime(true) - $time)."s-->"; //debug only
 ?>
 
 

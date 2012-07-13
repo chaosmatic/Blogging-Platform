@@ -16,12 +16,12 @@ class databaseaccess {
      		}
     	}
 
-	public function displayposts($lbound,$ubound) { 
+	public function displayposts($lbound,$PostPerPage) {
 		if ($this->db === null) throw new Exception("DB is not connected");
-		$query = "SELECT * FROM posts ORDER BY `id` DESC LIMIT :lbound, :ubound";
+		$query = "SELECT * FROM posts ORDER BY `id` DESC LIMIT :lbound, :PostPerPage";
 		$statement = $this->db->prepare($query);
 		$statement->bindValue(':lbound', $lbound, PDO::PARAM_INT);
-		$statement->bindValue(':ubound', $ubound, PDO::PARAM_INT);
+		$statement->bindValue(':PostPerPage', $PostPerPage, PDO::PARAM_INT);
 		$statement->execute();
 		$this->result = $statement->fetchAll(PDO::FETCH_ASSOC);
 		//var_dump($this->result); //debugging only
