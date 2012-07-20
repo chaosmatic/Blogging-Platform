@@ -1,4 +1,4 @@
-<?php //this is ot a proper security implementation. I'm just getting used to phpass. I'll fix this later
+<?php 
 require_once('database.php');
 require_once('PasswordHash.php');
 require_once('head.php');
