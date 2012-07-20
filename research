@@ -9,15 +9,6 @@ using Count()
 http://dev.mysql.com/doc/refman/5.1/en/counting-rows.html
 the docs on Count()
 
-Tangrs php code
-<?php
-     
-    $totalRows = theResultOf("SELECT COUNT(*) FROM database");
-    $totalPageNumbers = ceil( $totalRows / $rowsPerPage );
-     
-    $currentPageNumber = floor( $totalRows / $lowerBound );
-     
-    $entriesForCurrentPage = theResultOf("SELECT * FROM database ORDER BY id LIMIT ".escape($lowerBound).",".escape($upperBound));
-     
-    ?>
+SECURITY:
+http://www.openwall.com/articles/PHP-Users-Passwords
 

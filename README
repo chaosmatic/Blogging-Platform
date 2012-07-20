@@ -3,7 +3,6 @@ Small blogging platform in php.
 I am creating this to assist me in learning PHP. If I like it enough when I am finished I will use it myself.
 
 TODO:
-	- Need password for admin area
+	- Need to properly implement full blown security
 	- complete admin area : need Update and delete, already have create/read
-	- learn about appropriate pagifying solutions... Including id, manually managed id, or pajinate
-
+	
