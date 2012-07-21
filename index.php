@@ -7,6 +7,8 @@ $PostPerPage = 5;
 $lbound = $PostPerPage*$pageid;
 $dbh = new databaseaccess;
 $dbh->displayposts($lbound, $PostPerPage);
+$dbh->count();
+$totalpages = ceil($dbh->amount/$PostPerPage);
 if ($dbh->result != null){
 	foreach ($dbh->result as $v1) {
   		foreach ($v1 as  $value => $v2) {
@@ -19,22 +21,22 @@ if ($dbh->result != null){
 		}
 		echo "<hr>";
 	}
-	if($pageid == 0){
-		if($dbh->result[0]["id"] > $PostPerPage){
+	if($pageid == 0){//if first page
+		if($totalpages>1){//if filled
 			?>
 			<form method="get" action="<?php echo $PHP_SELF; ?>">
 			<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
 			</form>
 			<?php	
 		}
-	}elseif($pageid > 0 && $dbh->result[0]["id"] > $PostPerPage){
+	}elseif($totalpages>$pageid+1){//if middle page
 		?>
 		<form method="get" action="<?php echo $PHP_SELF; ?>">
 		<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
 		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
 		</form>
 	<?php
-	}elseif($dbh->result[0]["id"] <= $PostPerPage){
+	}elseif($totalpages==$pageid+1){//if last page
 		?>
 		<form method="get" action="<?php echo $PHP_SELF; ?>">
 		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>

@@ -49,6 +49,13 @@ foreach ($dbh->result as $v1) {
 ?>
 <input type="submit" value="Update" name="submit">
 </form>
+<h1>Update Password</h1>
+<form method="post" action="password.php">
+Password:<input type="password" size="50" maxlength="50" name="password"><br>
+New Password:<input type="password" size="50" maxlength="50" name="passwordnew"><br>
+New Password(again):<input type="password" size="50" maxlength="50" name="passwordnew1"><br>
+<input type="submit" value="Change password" name="submit">
+</form>
 <?php
 } else {
 ?>

@@ -78,12 +78,23 @@ class databaseaccess {
 	}
 	
 	public function writehash($hash){
-	if ($this->db  === null) throw new Exception("DB is not connected");
+		if ($this->db  === null) throw new Exception("DB is not connected");
 
-		$query = "INSERT INTO `Blogging-Platform`.`crypto` (`hash`) VALUES (:hash)";
+		$query = "UPDATE `Blogging-Platform`.`crypto` SET `hash` = :hash WHERE `crypto`.`id` = 1";
 		$statement = $this->db->prepare($query);
 		$statement->bindValue(':hash', $hash, PDO::PARAM_STR);
 		$statement->execute();
+	}
+
+	public function count(){
+		if ($this->db === null) throw new Exception("DB is not connected");
+
+		$query = "SELECT COUNT(*) FROM `Blogging-Platform`.`posts`";
+		$statement = $this->db->prepare($query);
+		$statement->execute();
+		$tempcount = $statement->fetch(PDO::FETCH_ASSOC);
+		$this->amount = $tempcount['COUNT(*)'];
+
 	}
 }
 
