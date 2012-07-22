@@ -3,8 +3,6 @@ Small blogging platform in php.
 I am creating this to assist me in learning PHP. If I like it enough when I am finished I will use it myself.
 
 TODO:
-	- Review code, check to make secure. *should* be decently secure
+	- Sanitize inputs
+	- Implement sessions as I have a major security flaw
 
-BUG(s):
-	- When the last page has 5 posts the "Older Posts" button displays
-	

@@ -13,7 +13,7 @@ if ($dbh->result != null){
 	foreach ($dbh->result as $v1) {
   		foreach ($v1 as  $value => $v2) {
 			if ($value == "title"){
-				echo "<h1>".$v2."</h1>";
+				echo "<font color='#007000'><h2>".$v2."</h2></font>";
 			}
 			if ($value == "text"){
 				echo "<p>".nl2br($v2)."</p>";

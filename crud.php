@@ -20,32 +20,40 @@ Text:<br><textarea cols="87" rows="35" wrap="soft" name="text"></textarea><br />
 <h1>Delete Post</h1>
 <form method="post" action="delete.php">
 <?php
-foreach ($dbh->result as $v1) {
-  	foreach ($v1 as  $value => $v2) {
-		if ($value == "id"){
-			echo "<input type='radio' name='id' value='".$v2."'><br>";
-		} 
-		if ($value == "title"){
-			echo $v2;
+if (null != $dbh->result) {
+	foreach ($dbh->result as $v1) {
+		foreach ($v1 as  $value => $v2) {
+			if ($value == "id"){
+				echo "<input type='radio' name='id' value='".$v2."'><br>";
+			} 
+			if ($value == "title"){
+				echo $v2;
+			}
 		}
 	}
-}
+}else{
+	echo "No posts<br>";
+}	
 ?>
 <input type="submit" value="Delete" name="submit">
 </form>
 <h1>Update Post</h1>
 <form method="post" action="update.php">
 <?php
-foreach ($dbh->result as $v1) {
-  	foreach ($v1 as  $value => $v2) {
-		if ($value == "id"){
-			echo "<input type='radio' name='id' value='".$v2."'><br>";
-		} 
-		if ($value == "title"){
-			echo $v2;
+if (null != $dbh->result) {
+	foreach ($dbh->result as $v1) {
+		foreach ($v1 as  $value => $v2) {
+			if ($value == "id"){
+				echo "<input type='radio' name='id' value='".$v2."'><br>";
+			} 
+			if ($value == "title"){
+				echo $v2;
+			}
 		}
 	}
-}
+}else{
+	echo "No posts<br>";
+}	
 ?>
 <input type="submit" value="Update" name="submit">
 </form>
