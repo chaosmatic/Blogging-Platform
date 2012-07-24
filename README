@@ -4,5 +4,5 @@ I am creating this to assist me in learning PHP. If I like it enough when I am f
 
 TODO:
 	- Sanitize inputs
-	- Implement sessions as I have a major security flaw
+	- Validate inputs
 

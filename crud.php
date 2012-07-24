@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$time = microtime(true); 
 require_once('database.php');
 require_once('PasswordHash.php');
 require_once('head.php');
@@ -70,11 +71,12 @@ if ($_SESSION['check']) {
 	<?php
 	echo "<a href='logout.php'>Logout</a>";
 } else {
-?>
-Password incorrect<br>
-<?
+	?>
+	Password incorrect<br>
+	<?
 }
 require_once('foot.php');
+echo "<!-PHP executed in: ".(microtime(true) - $time)."s-->"; //debug only
 ?>
 
 

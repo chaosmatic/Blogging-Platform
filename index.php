@@ -56,8 +56,3 @@ if ($dbh->result != null){
 require_once('foot.php');
 echo "<!-PHP executed in: ".(microtime(true) - $time)."s-->"; //debug only
 ?>
-
-
-
-
-
