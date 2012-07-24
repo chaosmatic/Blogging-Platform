@@ -1,9 +1,11 @@
 <?php 
+session_start();
+
 require_once('database.php');
 require_once('head.php');
 $dbh = new databaseaccess;
 $id = $_POST["id"];
-if(NULL === $id){
+if(!$_SESSION['check']){
 	echo "Please Login";
 }else{
 	$dbh->delete($id);

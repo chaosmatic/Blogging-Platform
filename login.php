@@ -1,5 +1,10 @@
 <?php
+session_start();
 require_once('head.php');
+If($_SESSION['check']){
+	header('Location: crud.php');
+    exit();
+}
 ?>
 <form method="post" action="crud.php">
 Password:<input type="password" size="50" maxlength="50" name="password"><br />
