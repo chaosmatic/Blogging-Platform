@@ -11,7 +11,6 @@ if($_SESSION['check']){
 	$passwordnew = $_POST["passwordnew"];
 	$passwordnew1 = $_POST["passwordnew1"];
 	$dbh->gethash();
-	$dbh->displayposts(0, 1024); //probably shouldn't hardcode this
 	$hash = $dbh->hash;
 	$check = $hasher->CheckPassword($password, $hash);
 	if ($check) {

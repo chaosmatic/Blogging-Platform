@@ -6,7 +6,10 @@ require_once('PasswordHash.php');
 require_once('head.php');
 $dbh = new databaseaccess;
 $hasher = new PasswordHash(8, false);
-$dbh->displayposts(0, 1024); //probably shouldn't hardcode this
+$dbh->count();
+$amountofposts = $dbh->amount;
+$dbh->displayposts(0, $amountofposts);//returns null, when 6 is coded in returns correct data
+echo $amountofposts; //returns 6
 if(!$_SESSION['check']){
 	$password = $_POST["password"];
 	$dbh->gethash();
