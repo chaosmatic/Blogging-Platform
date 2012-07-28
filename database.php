@@ -15,7 +15,7 @@ class databaseaccess {
            		throw new Exception("DB failed to connect ".$Exception->getMessage());
      		}
     	}
-
+    //READ
 	public function displayposts($lbound,$PostPerPage) {
 		if ($this->db === null) throw new Exception("DB is not connected");
 		$query = "SELECT * FROM posts ORDER BY `id` DESC LIMIT :lbound, :PostPerPage";
@@ -36,7 +36,7 @@ class databaseaccess {
 		$this->result = $statement->fetch(PDO::FETCH_ASSOC);
 	}
 
-
+	//WRITE
 	public function write($title,$text){
 		if ($this->db === null) throw new Exception("DB is not connected");
 
@@ -85,7 +85,7 @@ class databaseaccess {
 		$statement->bindValue(':hash', $hash, PDO::PARAM_STR);
 		$statement->execute();
 	}
-
+	//COUNT
 	public function count(){
 		if ($this->db === null) throw new Exception("DB is not connected");
 

@@ -12,7 +12,7 @@ $dbh->displayposts(0, $amountofposts);
 if(!$_SESSION['check']){
 	$password = $_POST["password"];
 	$dbh->gethash();
-		$hash = $dbh->hash;
+	$hash = $dbh->hash;
 	$_SESSION['check'] = $hasher->CheckPassword($password, $hash);
 }
 if ($_SESSION['check']) {
