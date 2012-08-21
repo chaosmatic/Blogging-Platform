@@ -7,6 +7,7 @@ $dbh = new databaseaccess;
 if(!$_SESSION['check']){
 	echo "Please Login";
 }else{
+	$id = $_SESSION["id"];
 	$text = $_POST["text"];
 	$title = $_POST["title"];
 	$dbh->update($title,$text,$id);
