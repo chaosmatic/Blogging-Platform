@@ -1,72 +1,67 @@
 html, body {
- background-color:#ffffff;
- margin:0;
- padding:0;
- height: 100%;
- font-family:"Verdana"; 
-
+    background-color: #F9F9F9;
+    font-family: "Verdana";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #262626;
 }
 
+a {
+    color:#0EA00E;
+    text-decoration:none;
+    
+}
 #content {
-  padding-left:1%;
-  min-height:85%;
-  float:left;
-  color: black;
-  width: 650px;
-  font-family:"Verdana"; 
-  display:inline;
-
+    color: black;
+    display: inline;
+    float: left;
+    font-family: "Verdana";
+    min-height: 85%;
+    padding-left: 1%;
+    width: 650px;
 }
-
 #head {
-  float: left;
-  color: black;
-  width: 100%;
-  height: 10%;
-  font-family:"Verdana"; 
-  font-size:200%;
+    color: black;
+    float: left;
+    font-family: "Verdana";
+    font-size: 200%;
+    height: 10%;
+    width: 100%;
 }
-
 #wrapper {
- 	position:relative; /* needed for footer positioning*/
-	margin:0 auto; /* center, not in IE5 */
-	width:650px;
-	background:#f0f0f0;
-	height:auto !important; /* real browsers */
-	height:94%; /* IE6: treaded as min-height*/
-	min-height:94%; /* real browsers */ 
-	border-style:solid;
-	border-color:#a0a0a0;
-	border-width:thin;
-	border-radius:10px;
-	overflow:hidden;
-	margin-top:2%;
-	margin-bottom:2%;
+    /*background: none repeat scroll 0 0 #F0F0F0;
+    border-color: #A0A0A0;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: thin;*/
+    height: auto !important;
+    margin: 2% auto;
+    min-height: 94%;
+    overflow: hidden;
+    position: relative;
+    width: 650px;
 }
-
 ul#list-nav {
-list-style:none;
-margin:0px;
-padding:0;
-width:650px
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 650px;
 }
-
 ul#list-nav li {
-display:inline
+    display: inline;
 }
-
 ul#list-nav li a {
-text-decoration:none;
-padding:5px 0;
-width:161px;
-background:#000000;
-color:#eee;
-float:left;
-text-align:center;
-border-left:1px solid #fff;
+    /*background: none repeat scroll 0 0 #000000;*/
+    /*border-left: 1px solid #FFFFFF;*/
+    color: #0f0f0f;
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 161px;
 }
-
 ul#list-nav li a:hover {
-background:#a0a0a0;
-color:#000
+   /* background: none repeat scroll 0 0 #A0A0A0;*/
+    color: #b0b0b0;
 }

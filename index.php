@@ -19,37 +19,33 @@ if ($dbh->result != null){
 				echo "<p>".nl2br($v2)."</p>";
 			}
 		}
-		echo "<hr>";
+		//echo "<hr>";
 	}
 	if($pageid == 0){//if first page
 		if($totalpages>1){//if filled
 			?>
-			<form method="get" action="<?php echo $PHP_SELF; ?>">
-			<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
-			</form>
+			<a href="index.php?pageid=<?php echo ($pageid + 1);?>"> Older Posts > </a>
+			<br>
 			<?php	
 		}
 	}elseif($totalpages>$pageid+1){//if middle page
 		?>
-		<form method="get" action="<?php echo $PHP_SELF; ?>">
-		<button name="pageid" value="<?php echo ($pageid + 1);?>" type="submit">Older Posts</button>
-		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
-		</form>
+		<a href="index.php?pageid=<?php echo ($pageid - 1);?>"> < Newer Posts </a>
+		<a href="index.php?pageid=<?php echo ($pageid + 1);?>"> Older Posts > </a>
+		
+		<br>
 	<?php
 	}elseif($totalpages==$pageid+1){//if last page
 		?>
-		<form method="get" action="<?php echo $PHP_SELF; ?>">
-		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
-		</form>
+		<a href="index.php?pageid=<?php echo ($pageid - 1);?>"> < Newer Posts </a>
+		<br>
 	<?php
 	}
 	
 }else {
 	echo "The content you requested is not availible.";
 		?>
-		<form method="get" action="<?php echo $PHP_SELF; ?>">
-		<button name="pageid" value="<?php echo ($pageid - 1);?>" type="submit">Newer Posts</button>
-		</form>
+		<a href="index.php?pageid=<?php echo ($pageid - 1);?>"> < Newer Posts </a>
 	<?php
 	}
 
