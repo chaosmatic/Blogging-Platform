@@ -10,7 +10,11 @@ html, body {
 a {
     color:#0EA00E;
     text-decoration:none;
-    
+}
+
+a:visited {
+    color:#0E500E;
+    text-decoration:none;
 }
 #content {
     color: black;
@@ -64,4 +68,20 @@ ul#list-nav li a {
 ul#list-nav li a:hover {
    /* background: none repeat scroll 0 0 #A0A0A0;*/
     color: #b0b0b0;
+}
+
+#old {
+    margin-right: 5px;
+    float:right;
+    text-align: right;
+}
+
+#title {
+    font-size: 60;
+    color:#10B010;
+}
+
+#post-title {
+    font-size: 40;
+    color:#007000;
 }

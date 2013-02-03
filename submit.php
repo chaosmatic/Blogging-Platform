@@ -3,12 +3,15 @@ session_start();
 $time = microtime(true); 
 require_once('head.php');
 require_once ('database.php');
-require_once ('markdown.php');
-$title = $_POST["title"];
-$text = $_POST["text"];
+if (get_magic_quotes_gpc()){  
+ 	$title = stripslashes($_POST["title"]);
+	$text = stripslashes($_POST["text"]);
+}else{ 	
+	$title = $_POST["title"];
+	$text = $_POST["text"];
+}
 $dbh = new databaseaccess;
 if (strlen($title) > 0 && $_SESSION['check']){
-	//$mdtext = Markdown($text);
 	$dbh->write($title,$text);
 	echo "post submitted";
 }elseif(!$_SESSION['check']){

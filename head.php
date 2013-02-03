@@ -3,11 +3,9 @@ echo "<html><head><meta http-equiv='content-type' content='text/html;charset=UTF
 echo "<title>//OfflineBlog</title>"; //title in top of browser
 echo "</head>";
 
-echo "<body link='#F01010' vlink='#B01010'>";
-
 echo "<div id=wrapper>";
 echo "<div id=head><center>";
-echo "<font size='70'> <font color='#10B010'>//OfflineBlog</font></font>"; //title at top of page
+echo "<span id='title'>//OfflineBlog</span>"; //title at top of page
 
 echo "</center>";
 	echo "</div>";
