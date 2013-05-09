@@ -1,7 +1,8 @@
 <?php
+require_once('user.php');
 session_start();
 require_once('head.php');
-If($_SESSION['check']){
+If($_SESSION['user']->checkLoggedin()){
 	header('Location: crud.php');
     exit();
 }

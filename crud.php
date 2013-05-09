@@ -2,20 +2,18 @@
 session_start();
 $time = microtime(true); 
 require_once('database.php');
-require_once('PasswordHash.php');
+require_once('user.php');
 require_once('head.php');
 $dbh = new databaseaccess;
-$hasher = new PasswordHash(8, false);
+$_SESSION['user'] = new user;
 $dbh->count();
 $amountofposts = (int) $dbh->amount; //needed to change, didn't like it as a string, which is what $dbh->amount is
 $dbh->displayposts(0, $amountofposts);
-if(!$_SESSION['check']){
+if(!$_SESSION['user']->checkLoggedIn()){
 	$password = $_POST["password"];
-	$dbh->gethash();
-	$hash = $dbh->hash;
-	$_SESSION['check'] = $hasher->CheckPassword($password, $hash);
+	$_SESSION['user']->checkPassword($dbh,$password);
 }
-if ($_SESSION['check']) {
+if ($_SESSION['user']->checkLoggedIn()) {
 	?>
 	<h1>New Post</h1>
 	<form method="post" action="submit.php">
