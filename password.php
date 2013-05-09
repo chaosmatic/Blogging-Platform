@@ -11,10 +11,10 @@ if($_SESSION['user']->checkLoggedIn()){
 	$passwordnew = $_POST["passwordnew"];
 	$passwordnew1 = $_POST["passwordnew1"];
 
-	$_SESSION['user']->checkPassword($dbh,$password);
+	$_SESSION['user']->checkPassword($password);
 
 	if ($_SESSION['user']->checkLoggedIn()) {
-		echo $_SESSION['user']->changePassword($dbh,$passwordnew,$passwordnew1);
+		echo $_SESSION['user']->changePassword($passwordnew,$passwordnew1);
 	}else{
 		echo "Password incorrect";
 	}
