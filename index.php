@@ -12,14 +12,17 @@ $dbh->count();
 $totalpages = ceil($dbh->amount/$PostPerPage);
 if ($dbh->result != null){
 	foreach ($dbh->result as $v1) {
+		echo "<div class='post'>";
   		foreach ($v1 as  $value => $v2) {
-			if ($value == "title"){
+  			if ($value == "title"){
 				echo "<span id='post-title'>".$v2."</span>";
-			}
-			if ($value == "text"){
+			}elseif ($value == "text"){
 				echo "<p>".Markdown($v2)."</p>";
+			}elseif ($value == "date"){
+				echo "<span id='date'>Posted at:".$v2."</span>";
 			}
 		}
+		echo "</div>";
 		//echo "<hr>";
 	}
 	if($pageid == 0){//if first page

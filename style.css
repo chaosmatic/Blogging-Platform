@@ -85,3 +85,13 @@ ul#list-nav li a:hover {
     font-size: 40;
     color:#007000;
 }
+
+.post {
+    position: relative;
+}
+
+#date {
+    position: absolute;
+    top: 50px;
+    font-size: 10;
+}
