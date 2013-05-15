@@ -1,8 +1,10 @@
 <?php
-require_once('user.php');
+
 session_start();
+require_once('user.php');
 require_once('head.php');
-If($_SESSION['user']->checkLoggedin()){
+$user = new user($dbh);
+If($user->checkLoggedin()){
 	header('Location: crud.php');
     exit();
 }

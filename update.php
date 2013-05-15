@@ -3,11 +3,14 @@ session_start();
 
 require_once('database.php');
 require_once('head.php');
+require_once('user.php');
 $dbh = new databaseaccess;
+$user = new user($dbh);
+
 $id = $_POST["id"];
 $_SESSION["id"] = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
 if (filter_var($id,FILTER_VALIDATE_INT)&& $id>-1) {
-	if(!$_SESSION['check']){
+	if (!$user->checkLoggedIn()){
 		echo "Please Login";
 	}else{
 		$dbh->displaybyid($id);

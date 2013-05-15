@@ -1,13 +1,14 @@
 <?php 
 session_start();
-
+require_once('user.php');
 require_once('database.php');
 require_once('head.php');
 $dbh = new databaseaccess;
+$user = new user($dbh);
 $id = $_POST["id"];
 $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
 if (filter_var($id,FILTER_VALIDATE_INT)&& $id>-1) {
-	if(!$_SESSION['check']){
+	if(!$user->checkLoggedIn()){
 		echo "Please Login";
 	}else{
 		$dbh->delete($id);

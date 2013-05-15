@@ -5,15 +5,15 @@ require_once('database.php');
 require_once('user.php');
 require_once('head.php');
 $dbh = new databaseaccess;
-$_SESSION['user'] = new user($dbh);
+$user = new user($dbh);
 $dbh->count();
 $amountofposts = (int) $dbh->amount; //needed to change, didn't like it as a string, which is what $dbh->amount is
 $dbh->displayposts(0, $amountofposts);
-if(!$_SESSION['user']->checkLoggedIn()){
+if(!$user->checkLoggedIn()){
 	$password = $_POST["password"];
-	$_SESSION['user']->checkPassword($password);
+	$user->checkPassword($password);
 }
-if ($_SESSION['user']->checkLoggedIn()) {
+if ($user->checkLoggedIn()) {
 	?>
 	<h1>New Post</h1>
 	<form method="post" action="submit.php">

@@ -2,9 +2,13 @@
 session_start();
 
 require_once('database.php');
+require_once('user.php');
 require_once('head.php');
+
 $dbh = new databaseaccess;
-if(!$_SESSION['check']){
+$user = new user($dbh);
+
+if(!$user->checkLoggedIn()){
 	echo "Please Login";
 }else{
 	$id = $_SESSION["id"];
