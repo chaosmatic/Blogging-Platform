@@ -23,9 +23,12 @@ if ($pageid >= 0 && 0 == $post){
 	  			if ($value == "title"){
 					$titlegroup[0] = $v2;
 				}elseif ($value == "text"){
-					echo "<div><p>".Markdown($v2)."</p></div>";
+					echo "<div class='post-text'><p>".Markdown($v2)."</p></div>";
 				}elseif ($value == "date"){
-					echo "<span class='date'>Posted at:".$v2."</span>";
+					$newdate = explode(' ', $v2);
+					$newdate = explode('-', $newdate[0]);
+					$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
+					echo "<span class='date'>".$date."</span>";
 				}elseif ($value == "id"){
 					$titlegroup[1] = $v2;
 				}
@@ -38,7 +41,6 @@ if ($pageid >= 0 && 0 == $post){
 			if($totalpages>1 && 0 == $post){//if filled
 				?>
 				<span id="old"><a href="index.php?pageid=<?php echo ($pageid + 1);?>"> Older Posts > </a></span>
-				<br>
 				<?php	
 			}
 		}elseif($totalpages>$pageid+1){//if middle page
@@ -46,12 +48,10 @@ if ($pageid >= 0 && 0 == $post){
 			<a href="index.php?pageid=<?php echo ($pageid - 1);?>"> < Newer Posts </a>
 			<span id="old"><a href="index.php?pageid=<?php echo ($pageid + 1);?>"> Older Posts > </a></span>
 			
-			<br>
 		<?php
 		}elseif($totalpages==$pageid+1){//if last page
 			?>
 			<a href="index.php?pageid=<?php echo ($pageid - 1);?>"> < Newer Posts </a>
-			<br>
 		<?php
 		}
 		
@@ -70,9 +70,12 @@ if ($pageid >= 0 && 0 == $post){
 	  	if ($key == "title"){
 			$titlegroup[0] = $value;
 		}elseif ($key == "text"){
-			echo "<div>".Markdown($value)."</div>";
+			echo "<div class='post-text'>".Markdown($value)."</div>";
 		}elseif ($key == "date"){
-				echo "<span class='date'>Posted at:".$value."</span>";
+				$newdate = explode(' ', $value);
+				$newdate = explode('-', $newdate[0]);
+				$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
+				echo "<span class='date'>".$date."</span>";
 		}elseif ($key == "id"){
 			$titlegroup[1] = $value;
 		}

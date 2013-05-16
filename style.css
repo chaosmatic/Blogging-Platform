@@ -7,12 +7,12 @@ html, body {
     color: #262626;
 }
 
-a {
+#content a {
     color:#0EA00E;
     text-decoration:none;
 }
 
-a:visited {
+.post-text a:visited {
     color:#0E500E;
     text-decoration:none;
 }
@@ -26,10 +26,9 @@ a:visited {
     width: 650px;
 }
 #head {
-    color: black;
     float: left;
     font-family: "Verdana";
-    font-size: 200%;
+    /*font-size: 200%;*/
     height: 10%;
     width: 100%;
 }
@@ -46,29 +45,7 @@ a:visited {
     position: relative;
     width: 650px;
 }
-ul#list-nav {
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-    width: 650px;
-}
-ul#list-nav li {
-    display: inline;
-}
-ul#list-nav li a {
-    /*background: none repeat scroll 0 0 #000000;*/
-    /*border-left: 1px solid #FFFFFF;*/
-    color: #0f0f0f;
-    float: left;
-    padding: 5px 0;
-    text-align: center;
-    text-decoration: none;
-    width: 161px;
-}
-ul#list-nav li a:hover {
-   /* background: none repeat scroll 0 0 #A0A0A0;*/
-    color: #b0b0b0;
-}
+
 
 #old {
     margin-right: 5px;
@@ -76,10 +53,10 @@ ul#list-nav li a:hover {
     text-align: right;
 }
 
-.title {
-    float:top;
-    font-size: 60;
-    color:#10B010;
+#title a {
+    text-decoration: none;
+    font-size: 50;
+    color:#0E500E;
 }
 
 .post-title {
@@ -99,7 +76,7 @@ ul#list-nav li a:hover {
 .date {
     position: absolute;
     top: 50px;
-    font-size: 10;
+    font-size: 14;
 
 }
 
