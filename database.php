@@ -34,6 +34,7 @@ class databaseaccess {
 		$statement->bindValue(':id', $id, PDO::PARAM_INT);
 		$statement->execute();
 		$this->result = $statement->fetch(PDO::FETCH_ASSOC);
+		//var_dump($this->result);
 	}
 
 	//WRITE

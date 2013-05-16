@@ -76,22 +76,30 @@ ul#list-nav li a:hover {
     text-align: right;
 }
 
-#title {
+.title {
+    float:top;
     font-size: 60;
     color:#10B010;
 }
 
-#post-title {
+.post-title {
+    position: absolute;
+    top: 0px;
     font-size: 40;
     color:#007000;
+
 }
 
 .post {
+    padding-top: 60px;
     position: relative;
+    width: 100%;
 }
 
-#date {
+.date {
     position: absolute;
     top: 50px;
     font-size: 10;
+
 }
+
