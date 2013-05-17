@@ -16,24 +16,17 @@ if ($pageid >= 0 && 0 == $post){
 
 	if ($dbh->result != null){
 
-		foreach ($dbh->result as $v1) {
-			$titlegroup = array();
+		foreach ($dbh->result as $value) {
 			echo "<div class='post'>";
-	  		foreach ($v1 as  $value => $v2) {
-	  			if ($value == "title"){
-					$titlegroup[0] = $v2;
-				}elseif ($value == "text"){
-					echo "<div class='post-text'><p>".Markdown($v2)."</p></div>";
-				}elseif ($value == "date"){
-					$newdate = explode(' ', $v2);
-					$newdate = explode('-', $newdate[0]);
-					$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
-					echo "<span class='date'>".$date."</span>";
-				}elseif ($value == "id"){
-					$titlegroup[1] = $v2;
-				}
-			}
-			echo "<span class='post-title'><a href='index.php?post=".$titlegroup[1]."'>".$titlegroup[0]."</a></span>";
+
+			echo "<span class='post-title'><a href='index.php?post=".$value['id']."'>".$value['title']."</a></span>";
+			echo "<div class='post-text'><p>".Markdown($value['text'])."</p></div>";
+
+			$newdate = explode(' ', $value['date']);
+			$newdate = explode('-', $newdate[0]);
+			$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
+			echo "<span class='date'>".$date."</span>";
+
 			echo "</div>";
 			//echo "<hr>";
 		}
@@ -63,27 +56,20 @@ if ($pageid >= 0 && 0 == $post){
 	}
 }elseif ($post >= 0 && 0 == $pageid){
 	$dbh->displaybyid($post);
-	$titlegroup = array();
-	echo "<div class='post'>";
-	foreach ($dbh->result as $key=>$value) {
-				
-	  	if ($key == "title"){
-			$titlegroup[0] = $value;
-		}elseif ($key == "text"){
-			echo "<div class='post-text'>".Markdown($value)."</div>";
-		}elseif ($key == "date"){
-				$newdate = explode(' ', $value);
-				$newdate = explode('-', $newdate[0]);
-				$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
-				echo "<span class='date'>".$date."</span>";
-		}elseif ($key == "id"){
-			$titlegroup[1] = $value;
-		}
-	}
-	echo "<span class='post-title'><a href='index.php?post=".$titlegroup[1]."'>".$titlegroup[0]."</a></span></div>";
-	//echo "<hr>";
-}
 
+		
+	echo "<div class='post'>";
+
+	echo "<span class='post-title'><a href='index.php?post=".$dbh->result['id']."'>".$dbh->result['title']."</a></span>";
+	echo "<div class='post-text'><p>".Markdown($dbh->result['text'])."</p></div>";
+
+	$newdate = explode(' ', $dbh->result['date']);
+	$newdate = explode('-', $newdate[0]);
+	$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
+	echo "<span class='date'>".$date."</span>";
+
+	echo "</div>";
+}
 
 require_once('foot.php');
 echo "<!-PHP executed in: ".(microtime(true) - $time)."s-->"; //debug only
