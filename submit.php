@@ -1,7 +1,7 @@
 <?php
 session_start();
 $time = microtime(true); 
-
+require_once('user.php');
 require_once('head.php');
 require_once ('database.php');
 
