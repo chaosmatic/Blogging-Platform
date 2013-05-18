@@ -1,19 +1,15 @@
 html, body {
-    background-color: #F9F9F9;
     font-family: "Verdana";
     height: 100%;
     margin: 0;
     padding: 0;
-    color: #262626;
 }
 
 #content a {
-    color:#0EA00E;
     text-decoration:none;
 }
 
 .post-text a:visited {
-    color:#0E500E;
     text-decoration:none;
 }
 #content {
@@ -56,15 +52,12 @@ html, body {
 #title a {
     text-decoration: none;
     font-size: 50;
-    color:#0E500E;
 }
 
 .post-title {
     position: absolute;
     top: 0px;
     font-size: 40;
-    color:#007000;
-
 }
 
 .post {
