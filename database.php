@@ -1,15 +1,13 @@
 <?php
+require_once('config.php');
 class databaseaccess {
 
-	public $hostname = 'localhost';
-	public $username = 'root';
-	public $password = 'root';
 	private $db = null;
 	public $rows;
 
   	public function __construct() {
         	try {
-       			$this->db = new PDO("mysql:host=$hostname;dbname=Blogging-Platform", $this->username, $this->password);
+       			$this->db = new PDO(DB_DSN, DB_USR, DB_PWD);
      		}
         	catch (PDOException $Exception) {
            		throw new Exception("DB failed to connect ".$Exception->getMessage());
