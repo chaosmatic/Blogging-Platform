@@ -4,6 +4,7 @@ $time = microtime(true);
 
 require_once('head.php');
 require_once ('database.php');
+require_once ('user.php');
 
 if (get_magic_quotes_gpc()){  
  	$title = stripslashes($_POST["title"]);
