@@ -13,6 +13,7 @@ This is a small lightweight blogging engine written in PHP and using a MySQL dat
 ## Colour.css
 This file is currently untracked.
 It looks by default like so:
+
 	html, body {
 	    background-color: #F9F9F9;
 	    color: #262626;
