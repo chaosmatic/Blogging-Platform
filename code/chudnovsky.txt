@@ -1,0 +1,58 @@
+##########################################################################################
+# To implement to increase speed:							 #
+#	check if need Newtons sqrt algo or if gmpy.fsqrt gives enough places and speed	 #
+#	Implement binary splitting							 #
+#		Implement FFT multiplication						 #
+##########################################################################################
+
+import gmpy
+import time
+from decimal import *
+
+#At 1 million precision, digits after 30,000 are inaccurate
+places = 33333#int(raw_input('Enter amount of precision you want: '))
+def Chudnosky(precision):
+
+	gmpy.set_minprec(precision)
+	k = gmpy.mpz(0)
+	total = gmpy.mpf(0)
+	div = gmpy.mpz(0)
+	while True:
+		prevdiv = div
+		gmpy.set_minprec(precision)
+		sign = (-1)**(k&1)
+		middleterm = gmpy.fac(6*k)
+		endterm = 13591409 + 545140134*k
+		numerator = sign*middleterm*endterm
+		dfirstterm = gmpy.fac(3*k)
+		dmiddleterm = (gmpy.fac(k))**3
+		dendterm = gmpy.fsqrt(640320**((6 * k) + 3))
+		denominator = gmpy.mpf(dfirstterm)*gmpy.mpf(dmiddleterm)*dendterm
+		div = numerator / denominator
+		#print "div: " + str(div)
+		total += gmpy.mpf(div)
+		#print str(k) + " " + str(numerator)[0:20] + " " + str(denominator)[0:20]
+		if k == 2150: break
+		if div == prevdiv: break
+		k += 1
+	total *= gmpy.mpz('12')
+	return (gmpy.mpf(1)/total)
+start_time = time.time()
+result = gmpy.mpf(Chudnosky(places))
+calc_time = time.time() - start_time
+print(result)
+
+f = open("pi.txt","r")
+match = ""
+correct = 0
+incorrect = 0
+for digit in str(result):
+	if digit == f.read(1):
+		correct += 1
+		match = match + "T"
+	else:
+		incorrect += 1
+		match = match + "F"
+print(match)
+f.close()
+print "It took " + str(calc_time) + " seconds to calculate pi with " + str(correct) + "/" + str(correct + incorrect) + " digits correct."

@@ -1,0 +1,37 @@
+size = int(raw_input("Enter size: "))
+finalmatrix = [[0 for i in range(size)] for j in range(size)]
+x = 0
+for counter in range(size, 0, -2):
+	matrix = [[0 for i in range(counter)] for j in range(counter)]
+	if counter == 1:
+		matrix[0][0] = "\\"
+	elif counter == 2:
+		matrix[0][0] = "-"
+		matrix[0][1] = "\\"
+		matrix[1][0] = "\\"
+		matrix[1][1] = "/"
+	else:
+		#Top
+		for topcount in range(0, counter-1):
+			matrix[0][topcount] = "-"
+		matrix[0][counter-1] = '\\'
+		#Right
+		for rightcount in range(1,counter-1):
+			matrix[rightcount][counter-1] = "|"
+		matrix[counter-1][counter-1] = "/"
+		#Bottom
+		matrix[counter-1][0] = "\\"
+		for bottomcount in range(1,counter-1):
+			matrix[counter-1][bottomcount] = "-"
+		#Left
+		for leftcount in range(2, counter-1):
+			matrix[leftcount][0] = "|"
+		matrix[1][0] = "/"
+	for a in range(len(matrix)): #Stack the grids into the final grid
+		for b in range(len(matrix)):
+			finalmatrix[a+x][b+x] = matrix[a][b]
+	x += 1
+for listline in finalmatrix:#PRINTING!
+	line = [n for n in listline]
+	print " ".join(line)
+
