@@ -73,3 +73,26 @@ html, body {
 
 }
 
+ul#list-nav {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 650px;
+}
+ul#list-nav li {
+    display: inline;
+}
+ul#list-nav li a {
+    /*background: none repeat scroll 0 0 #000000;*/
+    /*border-left: 1px solid #FFFFFF;*/
+    color: #0f0f0f;
+   float: left;
+    padding: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 161px;
+}
+ul#list-nav li a:hover {
+   /* background: none repeat scroll 0 0 #A0A0A0;*/
+    color: #b0b0b0;
+} 
