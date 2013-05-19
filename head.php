@@ -1,5 +1,16 @@
 <?php
-require_once("config.php");
+if (!file_exists('../../config/config.php')){
+	if (stripos($_SERVER["REQUEST_URI"],'setup.php')==false){
+		header('Location: setup.php');
+   		exit();
+   	}
+}elseif (stripos($_SERVER["REQUEST_URI"],'setup.php')==true){
+	header('Location: index.php');
+	exit();
+}else{
+	require_once("../../config/config.php");
+}
+
 echo "<html><head><meta http-equiv='content-type' content='text/html;charset=UTF-8'><link rel='shortcut icon' href='favicon.ico'><LINK REL=StyleSheet HREF='style.css' TYPE='text/css' MEDIA=screen><LINK REL=StyleSheet HREF='colour.css' TYPE='text/css' MEDIA=screen>";
 echo "<title>";
 echo TITLE;
