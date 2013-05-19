@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');
+require_once('../../config/config.php');
 class databaseaccess {
 
 	private $db = null;
