@@ -9,10 +9,11 @@ $id = $_POST["id"];
 $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
 if (filter_var($id,FILTER_VALIDATE_INT)&& $id>-1) {
 	if(!$user->checkLoggedIn()){
-		echo "Please Login";
+		echo "<a href='login.php'>Please Login</a>";
 	}else{
 		$dbh->delete($id);
-		echo "Post Deleted";
+		echo "Post Deleted<br>";
+		echo "<a href='crud.php'>Back</a>";
 	}
 }else{
 	echo "invalid id";

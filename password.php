@@ -18,11 +18,12 @@ if($user->checkLoggedIn()){
 
 	if ($user->checkLoggedIn()) {
 		echo $user->changePassword($passwordnew,$passwordnew1);
+		echo "<a href='crud.php'>Back</a>";
 	}else{
 		echo "Password incorrect";
 	}
 }else{
-	echo "please login";
+	echo "<a href='login.php'>Please Login</a>";
 }
 require_once('foot.php');
 ?>

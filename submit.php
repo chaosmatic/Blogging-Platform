@@ -19,9 +19,10 @@ $user = new user($dbh);
 
 if (strlen($title) > 0 && $user->checkLoggedIn()){
 	$dbh->write($title,$text);
-	echo "post submitted";
+	echo "post submitted<br>";
+	echo "<a href='crud.php'>Back</a>";
 }elseif(!$user->checkLoggedIn()){
-	echo "please login";
+	echo "<a href='login.php'>Please Login</a>";
 }else{
 	echo "please have a non-empty title";
 }

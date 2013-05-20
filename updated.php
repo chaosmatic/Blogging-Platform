@@ -9,7 +9,7 @@ $dbh = new databaseaccess;
 $user = new user($dbh);
 
 if(!$user->checkLoggedIn()){
-	echo "Please Login";
+	echo "<a href='login.php'>Please Login</a>";
 }else{
 	$id = $_SESSION["id"];
 	if (get_magic_quotes_gpc()){  
@@ -20,7 +20,8 @@ if(!$user->checkLoggedIn()){
 		$text = $_POST["text"];
 	}
 	$dbh->update($title,$text,$id);
-	echo "Post Updated";
+	echo "Post Updated<br>";
+	echo "<a href='crud.php'>Back</a>";
 }
 require_once('foot.php');
 ?>
