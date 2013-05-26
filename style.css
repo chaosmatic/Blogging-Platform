@@ -51,13 +51,13 @@ html, body {
 
 #title a {
     text-decoration: none;
-    font-size: 50;
+    font-size: 50px;
 }
 
 .post-title {
     position: absolute;
     top: 0px;
-    font-size: 40;
+    font-size: 40px;
 }
 
 .post {
@@ -96,3 +96,24 @@ ul#list-nav li a:hover {
    /* background: none repeat scroll 0 0 #A0A0A0;*/
     color: #b0b0b0;
 } 
+
+h2 {
+    font-size: 30px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
