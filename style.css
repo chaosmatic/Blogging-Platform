@@ -19,8 +19,9 @@ html, body {
     font-family: "Verdana";
     min-height: 85%;
     padding-left: 1%;
-    width: 650px;
+    width: 645px;
 }
+
 #head {
     float: left;
     font-family: "Verdana";
