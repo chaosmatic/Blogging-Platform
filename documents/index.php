@@ -3,7 +3,7 @@ $dir = "../";
 $title = "Documents - ";
 require_once("../head.php")
 ?>
-<h2>Writing</h2>
+<h2>Documents</h2>
 I have written several articles, mainly synopsis of Novels for Literature. I will continue to add to this collection, as I research or find out about more interesting things.
 <p>
 <b><a href="LadyofShallot.doc">The Lady Of Shallot</a> </b>- My notes on The Lady of Shallot.<p>
