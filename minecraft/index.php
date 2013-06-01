@@ -4,9 +4,7 @@ $title = "Minecraft - ";
 require_once("../head.php")
 ?>
 <h2>Minecraft</h2>
-My minecraft server is running on a Raspberry Pi. With such computing restraints, gameplay is somewhat restricted and only 2 people will be able to play at the same time.
-<p>
-The address is minecraft.milfordsworld.com
+I have run a minecraft server in the past. Currently, it is no longer operational.
 <p>
 I have uploaded each of the maps, or screenshots of portions of them for historical reference.<p>
 The server was first known as 1337craft.dydns.org, before I bought a domain.<p>
@@ -26,8 +24,8 @@ I then decided to upgrade to a retired 1U (skinny) rack server (Dual Xeons @ 3.0
 <p>
  I finally bought a T61 Lenovo laptop (Dual core @ 2.1Ghz @ 2Gb RAM) for $100. This solved my issues, but slowly died due to running 24/7. I repaired it and refurbished it for personal use after the end of the server.<p>
 <!--<strike>Due to excessive griefing from shady characters such as Zennon Doulis (minecraft accounts:weirdz101, awesome123456121 and Luna_Frost), Angus Roberts (minecraft account:angrock709), Jasper McMahon (minecraft account:JaZa1o1), Connor Webster (minecraft accounts:connorsw2 and superkiller967), my server is now a whitelist server, so if you want to play you will have to <a href="/contact/index.php">email me your username.</a></strike>
-<p>-->
-<object width="100%" data="../cgi-bin/status.cgi"></object>
+<p>
+<object width="100%" data="../cgi-bin/status.cgi"></object>-->
 <?php
 require_once("../foot.php")
 ?>

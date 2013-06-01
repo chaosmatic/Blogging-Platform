@@ -4,7 +4,7 @@ $title = "Documents - ";
 require_once("../head.php")
 ?>
 <h2>Documents</h2>
-I have written several articles, mainly synopsis of Novels for Literature. I will continue to add to this collection, as I research or find out about more interesting things.
+This is where I store documents that don't really fit the blog format. This includes synopsis' of books and plays, as well as cheat sheets for physics.
 <p>
 <b><a href="LadyofShallot.doc">The Lady Of Shallot</a> </b>- My notes on The Lady of Shallot.<p>
 <b><a href="inthelakeofthewoods.php">In the Lake of the Woods</a> </b>- A sypnosis of In the Lake of the Woods.<p>
