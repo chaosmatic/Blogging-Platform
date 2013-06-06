@@ -25,6 +25,18 @@ class databaseaccess {
 		//var_dump($this->result); //debugging only
 	}
 
+	public function archive(){
+		if ($this->db === null) throw new Exception("DB is not connected");
+		$query = "SELECT * FROM posts ORDER BY `id` DESC";
+		$statement = $this->db->prepare($query);
+		$statement->execute();
+		$this->result[0] = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
+		$query = "SELECT * FROM posts ORDER BY `id` DESC";
+		$statement = $this->db->prepare($query);
+		$statement->execute();
+		$this->result[1] = $statement->fetchAll(PDO::FETCH_COLUMN, 3);
+	}   
+
 	public function displaybyid($id) {
 		if ($this->db === null) throw new Exception("DB is not connected");
 		$query = "SELECT * FROM posts WHERE id = :id";
