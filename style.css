@@ -56,20 +56,14 @@ html, body {
 }
 
 .post-title {
-    position: absolute;
-    top: 0px;
     font-size: 40px;
 }
 
 .post {
-    padding-top: 60px;
-    position: relative;
     width: 100%;
 }
 
 .date {
-    position: absolute;
-    top: 50px;
     font-size: 14;
 
 }
