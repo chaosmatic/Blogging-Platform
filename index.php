@@ -57,7 +57,7 @@ if ($pageid >= 0 && 0 == $post){
 		
 	echo "<div class='post'>";
 
-	echo "<span class='post-title'><a href='index.php?post=".$dbh->result['id']."'>".$dbh->result['title']."</a></span>";
+	echo "<span class='post-title'><a href='index.php?post=".$dbh->result['id']."'>".$dbh->result['title']."</a></span><br>";
 	
 
 	$newdate = explode(' ', $dbh->result['date']);
