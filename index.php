@@ -58,13 +58,13 @@ if ($pageid >= 0 && 0 == $post){
 	echo "<div class='post'>";
 
 	echo "<span class='post-title'><a href='index.php?post=".$dbh->result['id']."'>".$dbh->result['title']."</a></span>";
-	echo "<div class='post-text'><p>".Markdown($dbh->result['text'])."</p></div>";
+	
 
 	$newdate = explode(' ', $dbh->result['date']);
 	$newdate = explode('-', $newdate[0]);
 	$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
 	echo "<span class='date'>".$date."</span>";
-
+echo "<div class='post-text'><p>".Markdown($dbh->result['text'])."</p></div>";
 	echo "</div>";
 }
 
