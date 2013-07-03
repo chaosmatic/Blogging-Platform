@@ -64,7 +64,7 @@ if ($pageid >= 0 && 0 == $post){
 	$newdate = explode('-', $newdate[0]);
 	$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
 	echo "<span class='date'>".$date."</span>";
-echo "<div class='post-text'><p>".Markdown($dbh->result['text'])."</p></div>";
+echo "<div class='post-text'>".Markdown($dbh->result['text'])."</div>";
 	echo "</div>";
 }
 
