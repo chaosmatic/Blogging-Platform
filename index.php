@@ -23,7 +23,7 @@ if ($pageid >= 0 && 0 == $post){
 			$date = date( 'j F y', mktime(0, 0, 0, $newdate[1], $newdate[2], $newdate[0]) );
 			echo "<span class='post-title'><a href='index.php?post=".$value['id']."'>".$value['title']."</a></span><br>";
 			echo "<span class='date'>".$date."</span>";
-			echo "<div class='post-text'><p>".Markdown($value['text'])."</p></div>";
+			echo "<div class='post-text'>".Markdown($value['text'])."</div>";
 			echo "</div>";
 			//echo "<hr>";
 		}
