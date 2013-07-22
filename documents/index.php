@@ -17,7 +17,6 @@ This is where I store documents that don't really fit the blog format. This incl
 <b><a href="softwaredevelopment.pdf">Software Development Notes (Now updated)</a></b>- A brief (10 page) summary of Mr Janson's text book with a few extra notes.<p>
 <b><a href="gatsby.php">The Great Gatsby</a></b>- A synopsis of The Great Gatsby.<p>
 <b><a href="physicsunit2cheatsheet.pdf">Physics Unit 2 Cheat Sheet</a></b>-A cheat sheet for unit 2 of Physics. Print half size. It doesn't contain detailed study but so that you can add it yourself, a copy for editing can be found <a href="physicsunit2cheatsheet.doc">Here</a>.<p>
-<b><a href="AIO2012.pdf">Australian Informatics Olympiad 2012</a></b>- A poorly scanned PDF of the AIO 2012. Still legible, comes with annotations. What is copyright?<p>
 <?php
 require_once("../foot.php")
 ?>
