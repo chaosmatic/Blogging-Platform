@@ -8,10 +8,10 @@ I have run a minecraft server in the past. Currently, it is no longer operationa
 <p>
 I have uploaded each of the maps, or screenshots of portions of them for historical reference.<p>
 The server was first known as 1337craft.dydns.org, before I bought a domain.<p>
-<a href="world.png">First Map</a>- First played around the 23rd of February 2011, in Beta 1.3. Was not used after the introduction of the second map.<br>
+<a href="http://i.imgur.com/UiCZnwd.jpg">First Map</a>- First played around the 23rd of February 2011, in Beta 1.3. Was not used after the introduction of the second map.<br>
 <p>The server changed name in May 2011 to jcpla.net:1337 as I bought a domain name.<p>
-<a href="world2.png">Second Map</a>- First played around the 16th of June 2011 in Beta 1.6.6. Was not used after the introduction of the third map.<br>
-<p><a href="world3.png">Third Map</a>- First played around the 13th of July 2011 in Beta 1.7.3. 
+<a href="http://i.imgur.com/g3NKP4X.png">Second Map</a>- First played around the 16th of June 2011 in Beta 1.6.6. Was not used after the introduction of the third map.<br>
+<p><a href="http://i.imgur.com/YeK8pc3.jpg">Third Map</a>- First played around the 13th of July 2011 in Beta 1.7.3. 
 <p> The server changed names again in November 2011 to milfordsworld.com - the name it retains to this day.
 <p><b>The end of the server</b> <br>After excessive griefing which took the server down for two weeks, the server started to decline. The third map was briefly replaced by a hunger games map and plugin on the 10th of August 2012. The server was taken down on the 24th of August 2012, just over one and a half years after the server began.
 <p>
