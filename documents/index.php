@@ -6,6 +6,7 @@ require_once("../head.php")
 <h2>Documents</h2>
 This is where I store documents that don't really fit the blog format. This includes synopsis' of books and plays, as well as cheat sheets for physics.
 <p>
+<b><a href="physicsunit34cheatsheet.docx">Physics Unit 3 and 4 Cheat Sheet</a></b> A cheat sheet for units 3 and 4 of Physics. Print half size. There are 5 pages already filled out, if you print half size you get a total of 8 pages, so you can fill in the rest. I will update it from time to time. Disclaimer: I also take no responsibility for it being wrong or incorrect, although I will use it myself. <p>
 <b><a href="LadyofShallot.doc">The Lady Of Shallot</a> </b>- My notes on The Lady of Shallot.<p>
 <b><a href="inthelakeofthewoods.php">In the Lake of the Woods</a> </b>- A sypnosis of In the Lake of the Woods.<p>
 <b><a href="hamlet.php">Hamlet</a> </b>- A sypnosis of Hamlet.<p>
