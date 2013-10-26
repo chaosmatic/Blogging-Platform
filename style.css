@@ -15,7 +15,6 @@ html, body {
 #content {
     display: inline;
     float: left;
-    font-family: "Verdana";
     min-height: 85%;
     padding-left: 1%;
     width: 645px;
@@ -78,7 +77,6 @@ ul#list-nav li {
 ul#list-nav li a {
     /*background: none repeat scroll 0 0 #000000;*/
     /*border-left: 1px solid #FFFFFF;*/
-    color: #0f0f0f;
    float: left;
     padding: 5px 0;
     text-align: center;
