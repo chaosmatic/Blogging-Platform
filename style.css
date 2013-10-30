@@ -82,6 +82,7 @@ ul#list-nav li a {
     text-align: center;
     text-decoration: none;
     width: 161px;
+    color: #262626;
 }
 ul#list-nav li a:hover {
    /* background: none repeat scroll 0 0 #A0A0A0;*/
