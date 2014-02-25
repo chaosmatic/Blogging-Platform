@@ -4,7 +4,7 @@ $title = "Code - ";
 require_once("../head.php")
 ?>
 <h2>Code</h2>
-Any code that I write will be posted here. Some of it will be course work for my Software development course, other parts will be made for my enjoyment.<p>
+Web code that I write will be posted here. Some of it is course work from VCE or Uni, others were made for my own enjoyment.<p>
 <a href="http://github.com/chaosmatic/Phone-directory">Phone Directory</a> - This phone directory is web based, using PHP and MySQL.<p> 
 <a href="http://github.com/chaosmatic/Blogging-Platform">Blogging platform</a> - Again in PHP and MySQL, I am currently satisfied with it. It is what I am currently using for this website.<p>
 <a href="SDU302.zip">Software Development Unit 3 SAC 2</a> - This code in Visual Basic utilises text files and 2d arrays to store and process data. <p>
