@@ -4,7 +4,7 @@ $title = "Minecraft - ";
 require_once("../head.php")
 ?>
 <h2>Minecraft</h2>
-My minecraft server runs Minecraft 1.7.4 and is accessible via milfordsworld.com. I have also provided an <a href="map/">online map</a>. The minecraft server runs on an ODROID U-3 which is essentially the inside of a Samsung Galaxy S3
+My minecraft server runs Minecraft 1.7.9 and is accessible via milfordsworld.com. I have also provided an <a href="map/">online map</a>. The minecraft server runs on an ODROID U-3 which is essentially the inside of a Samsung Galaxy S3
 <p>
 I have uploaded each of the previous maps, or screenshots of portions of them for historical reference.<p>
 The server was first known as 1337craft.dydns.org, before I bought a domain.<p>
@@ -12,9 +12,8 @@ The server was first known as 1337craft.dydns.org, before I bought a domain.<p>
 <p>The server changed name in May 2011 to jcpla.net:1337 as I bought a domain name.<p>
 <a href="http://i.imgur.com/g3NKP4X.png">Second Map</a>- First played around the 16th of June 2011 in Beta 1.6.6. Was not used after the introduction of the third map.<br>
 <p><a href="http://i.imgur.com/YeK8pc3.jpg">Third Map</a>- First played around the 13th of July 2011 in Beta 1.7.3. 
-<p> The server changed names again in November 2011 to milfordsworld.com - the name it retains to this day.
-<p><b>The end of the server</b> <br>After excessive griefing which took the server down for two weeks, the server started to decline. The third map was briefly replaced by a hunger games map and plugin on the 10th of August 2012. The server was taken down on the 24th of August 2012, just over one and a half years after the server began.
-<p>
+<p> The server changed names (and maps) again in November 2011 to milfordsworld.com - the name it retains to this day.
+
 <h3>The hardware of the server</h3>
 The server has run on 4 machines over its lifetime. It first ran on my personal tower (Core 2 Quad @ 2.66Ghz, 4 Gb RAM), however I desired a dedicated machine.
 <p>

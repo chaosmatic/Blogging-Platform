@@ -9,4 +9,3 @@ This is a small lightweight blogging engine written in PHP and using a MySQL dat
 - Download and unzip this repo in your webservers root folder
 - Ensure that config.php is writeable by the webserver user and not visible to public.
 - navigate to the index.php and it will run you through the rest.
-
