@@ -4,7 +4,7 @@ $title = "Minecraft - ";
 require_once("../head.php")
 ?>
 <h2>Minecraft</h2>
-My minecraft server runs Minecraft 1.7.4 and is accessible via blog.milfordsworld.com. I have also provided an <a href="map/">online map</a>. The minecraft server runs on an ODROID U-3 which is essentially the inside of a Samsung Galaxy S3
+My minecraft server runs Minecraft 1.7.4 and is accessible via milfordsworld.com. I have also provided an <a href="map/">online map</a>. The minecraft server runs on an ODROID U-3 which is essentially the inside of a Samsung Galaxy S3
 <p>
 I have uploaded each of the previous maps, or screenshots of portions of them for historical reference.<p>
 The server was first known as 1337craft.dydns.org, before I bought a domain.<p>

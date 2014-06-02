@@ -5,7 +5,9 @@ require_once ('database.php');
 require_once ('markdown.php');
 $pageid = $_GET["pageid"];
 $post = $_GET["post"];
-echo "Hi, I'm Jonathan Milford and this is my website. It contains my (infrequently updated) blog, details on the minecraft server I run and some of my programming projects.<p>";
+
+
+
 $dbh = new databaseaccess;
 if ($pageid >= 0 && 0 == $post){
 	$PostPerPage = 5;
