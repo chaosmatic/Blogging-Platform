@@ -1,6 +1,6 @@
 # Blogging-Platform
 
-This is a small lightweight blogging engine written in PHP and using a MySQL database.
+This is a small lightweight blogging engine written in PHP and using a MySQL database. At the moment this repo also contains my personal website files as well. At some point I should seperate it out and make sure that the Blogging Platform stands on its own.
 
 ## Installation
 
@@ -10,23 +10,3 @@ This is a small lightweight blogging engine written in PHP and using a MySQL dat
 - Ensure that config.php is writeable by the webserver user and not visible to public.
 - navigate to the index.php and it will run you through the rest.
 
-## Colour.css
-This file is currently untracked.
-It looks by default like so:
-
-	html, body {
-	    background-color: #F9F9F9;
-	    color: #262626;
-	}
-	#content a {
-	    color:#0EA00E;
-	}
-	.post-text a:visited {
-	    color:#0E500E;
-	}
-	#title a {
-	    color:#0E500E;
-	}
-	.post-title {
-	    color:#007000;
-	}
