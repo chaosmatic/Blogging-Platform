@@ -1,0 +1,21 @@
+html, body {
+    background-color: #FFFFFF; /*#F9F9F9;*/
+    color: #262626;
+}
+#content a {
+    color:#BF3030;
+}
+.post-text a:visited {
+    color:#A60000;
+}
+#title a {
+    color:#A60000;
+}
+.post-title {
+    color:#BF3030;
+}
+
+h1, h2, h3, b {
+        color:#BF3030;
+}
+
