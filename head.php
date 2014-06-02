@@ -1,6 +1,6 @@
 <?php
 require_once("config.php");
-echo "<html><head><meta http-equiv='content-type' content='text/html;charset=UTF-8'><link rel='shortcut icon' href='".$dir."favicon.ico'><LINK REL=StyleSheet HREF='".$dir."style.css' TYPE='text/css' MEDIA=screen><LINK REL=StyleSheet HREF='".$dir."colour.css' TYPE='text/css' MEDIA=screen>";
+echo "<html><head><meta http-equiv='content-type' content='text/html;charset=UTF-8'><link rel='shortcut icon' href='".$dir."favicon.ico'  type='image/x-icon'><LINK REL=StyleSheet HREF='".$dir."style.css' TYPE='text/css' MEDIA=screen><LINK REL=StyleSheet HREF='".$dir."colour.css' TYPE='text/css' MEDIA=screen>";
 echo "<title>";
 echo $title.TITLE;
 echo "</title>"; //title in top of browser
